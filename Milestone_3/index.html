@@ -31,13 +31,22 @@
 
           <div class="movie">
 
+            <img class="locandina" :src="'https://image.tmdb.org/t/p/w300/' + movie.poster_path" alt="">
+
             <h2>Titolo del film: {{movie.title}}</h2>
             <h2>Titolo originale: {{movie.original_title}}</h2>
 
-            <img :src="'https://flagcdn.com/40x30/' + movie.original_language + '.png'"
+            <img class="flag" :src="'https://flagcdn.com/40x30/' + movie.original_language + '.png'"
             onerror="this.onerror=null;this.src='http://www.silverskytravel.com/img/image-not-available.jpg';">
                     
-            <h2>Media: {{movie.vote_average}}</h2>
+            <h2>Vote:</h2>
+              <span v-for="n in Math.ceil(movie.vote_average % 2)">
+                <i class="fas fa-star"></i>
+              </span>
+
+              <span v-for="n in (5 - Math.ceil(movie.vote_average % 2))">
+                <i class="far fa-star"></i>
+              </span>
                         
           </div>
 
@@ -49,13 +58,21 @@
 
           <div class="serie">
 
+            <img class="locandina" :src="'https://image.tmdb.org/t/p/w300/' + tvSerie.poster_path" alt="">
+
             <h2>Titolo della serie: {{tvSerie.name}}</h2>
             <h2>Titolo della serie: {{tvSerie.original_name}}</h2>
 
-              <img :src="'https://flagcdn.com/40x30/' + tvSerie.original_language + '.png'"
+              <img class="flag" :src="'https://flagcdn.com/40x30/' + tvSerie.original_language + '.png'"
               onerror="this.onerror=null;this.src='http://www.silverskytravel.com/img/image-not-available.jpg';">
-                      
-              <h2>Titolo della serie: {{tvSerie.vote_average}}</h2>
+                   
+              <h2>Vote:</h2>
+              <span v-for="n in Math.ceil(tvSerie.vote_average % 2)">
+                <i class="fas fa-star"></i>
+              </span>
+              <span v-for="n in (5 - Math.ceil(tvSerie.vote_average % 2))">
+                <i class="far fa-star"></i>
+              </span>
 
             </div>
                         
