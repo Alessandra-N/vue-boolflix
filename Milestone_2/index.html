@@ -25,13 +25,16 @@
         </header>
 
         <main>
-
+<h1>Lista movies</h1>
             <div class="movies" v-for="movie in movies">
+
+              
+
+
                 <div class="movie">
 
                   <h2>Titolo del film: {{movie.title}}</h2>
                   <h2>Titolo originale: {{movie.original_title}}</h2>
-                  <h2>Lingua originale: {{movie.original_language}}</h2>
 
                   <img :src="'https://flagcdn.com/40x30/' + movie.original_language + '.png'"
                   onerror="this.onerror=null;this.src='http://www.silverskytravel.com/img/image-not-available.jpg';">
@@ -39,6 +42,27 @@
                   <h2>Media: {{movie.vote_average}}</h2>
                         
                 </div>
+              <h1>Lista serie TV</h1>
+                <div class="tv_serie" v-for="tvSerie in tvSeries">
+
+                 
+
+                  <div class="serie">
+
+                    <h2>Titolo della serie: {{tvSerie.name}}</h2>
+                    <h2>Titolo della serie: {{tvSerie.original_name}}</h2>
+
+                    <img :src="'https://flagcdn.com/40x30/' + tvSerie.original_language + '.png'"
+                    onerror="this.onerror=null;this.src='http://www.silverskytravel.com/img/image-not-available.jpg';">
+                      
+                    <h2>Titolo della serie: {{tvSerie.vote_average}}</h2>
+
+                  </div>
+
+                  
+                        
+                </div>
+
             </div>
             
         </main>

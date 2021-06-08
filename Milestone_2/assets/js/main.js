@@ -4,8 +4,10 @@ const app = new Vue  ({
 
     data: {
         url: "https://api.themoviedb.org/3/search/movie?api_key=721dbf1e3d02ede41edd01ebb9dda0b6",
+        seriesUrl: "https://api.themoviedb.org/3/search/tv?api_key=721dbf1e3d02ede41edd01ebb9dda0b6",
         searchedMovie: "",
         movies: [],
+        tvSeries: [],
         
     },
 
@@ -17,12 +19,23 @@ const app = new Vue  ({
             .then(response => {
             
             this.movies = response.data.results;
-            console.log(this.movies);
 
-        })
-        .catch(e => {
+            })
+            .catch(e => {
             console.error(e);
-        })
+            })
+
+            axios
+            .get(this.seriesUrl + "&query=" + this.searchedMovie.replace(/ /g, '+'))
+            .then(response => {
+            
+            this.tvSeries = response.data.results;
+            console.log(this.tvSeries);
+
+            })
+            .catch(e => {
+            console.error(e);
+            })
         }
         
     },

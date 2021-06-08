@@ -29,7 +29,8 @@ Trasformiamo la stringa statica della lingua in una vera e propria bandiera dell
 
 Allarghiamo poi la ricerca anche alle serie tv. Con la stessa azione di ricerca dovremo prendere sia i film che corrispondono alla query, sia le serie tv, stando attenti ad avere alla fine dei valori simili (le serie e i film hanno campi nel JSON di risposta diversi, simili ma non sempre identici)
 Qui un esempio di chiamata per le serie tv:
-https://api.themoviedb.org/3/search/tv?api_key=e99307154c6dfb0b4750f6603256716d&language=it_IT&query=scrubs
+https://api.themoviedb.org/3/search/tv?api_key=e99307154c6dfb0b4750f6603256716d&language=it_IT&query=scrubs ✔
+
 Consigli:
 Andate in fila, seguendo le milestone, non pensate all’interfaccia grafica fino al punto 4
 Non pensate all’interfaccia grafica fino al punto 4 (si, l’ho scritto due volte), tutto può essere risolto con una <ul> non stilizzata

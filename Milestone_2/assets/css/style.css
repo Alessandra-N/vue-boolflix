@@ -1,6 +1,10 @@
-.movie {
+.movie, .serie {
     padding: 5rem;
     background-color: aquamarine;
     margin: 3rem;
     border-radius: 10px;
+}
+
+img {
+    max-width: 80px;
 }
