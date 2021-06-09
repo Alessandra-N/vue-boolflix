@@ -1,0 +1,66 @@
+/* COMMON */
+body {
+    height: 100vh;
+    background-image: url(https://static.vecteezy.com/system/resources/previews/000/374/866/non_2x/seamless-abstract-background-horizontally-and-vertically-repeatable-vector.jpg);
+}
+
+/* HEADER */
+header {
+    padding: 2rem;
+    color: white;
+    border-bottom: 2px solid white;
+    font-size: 80px;
+}
+header > nav > h1 {
+    font-family: 'Lobster', cursive;
+}
+.form_box > * {
+    font-size: 20px;
+    padding: 0.5rem;
+    border: 0;
+    border-radius: 10px;
+}
+.form_box > input {
+    margin-right: 1rem;
+    padding-left: 2rem;
+    width: 190px;
+}
+.form_box > button {
+    background: white;
+    background: linear-gradient(180deg, white 5%, rgba(23,170,156,1) 95%);
+    padding: 0.5rem 2rem;
+    border: none;
+}
+
+/* MAIN */
+.movies, .tv_series {
+    padding: 3rem;
+}
+.movie_card {
+    height: 400px;
+    width: 300px;
+    padding: 1rem;
+    background: rgb(113,128,174);
+    background: linear-gradient(0deg, rgba(113,128,174,1) 10%, rgb(77, 75, 190) 90%);
+    border: 2px solid white;
+    border-radius: 10px;
+    margin-bottom: 2rem;
+}
+.movie_card > .locandina {
+    height: 200px;
+    width: 150px;
+}
+.movie_card > .movie_title {
+    font-family: 'Acme', sans-serif;
+    font-size: 20px;
+    text-align: center;
+    color: white;
+}
+.movie_title i {
+    color: lightgoldenrodyellow;
+}
+
+.flag {
+    max-width: 30px;
+    margin-left: 1rem;
+}
