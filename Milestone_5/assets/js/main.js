@@ -16,9 +16,7 @@ const app = new Vue  ({
             axios
             .get(this.url + "&query=" + this.searchedMovie.replace(/ /g, '+'))
             .then(response => {
-                console.log(response.data);
                 this.movies = response.data.results;
-
             })
             .catch(e => {
             console.error(e);
@@ -27,22 +25,14 @@ const app = new Vue  ({
             axios
             .get(this.seriesUrl + "&query=" + this.searchedMovie.replace(/ /g, '+'))
             .then(response => {
-            
             this.tvSeries = response.data.results;
-            console.log(response.data);
-
             })
             .catch(e => {
             console.error(e);
             })
+            
         }
         
     },
-
-    mounted() {
-
-       
-    }
-
 
 })
