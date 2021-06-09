@@ -28,6 +28,9 @@
           <i class="fas fa-film"></i>
           <h1>Welcome to BoolFlix</h1>
           <div class="form_box d-flex align-items-center">
+            <select>
+              <option v-for="genre in genres"value="">{{genre.name}}</option>
+            </select>
             <input type="text" placeholder="Search by title" v-model="searchedMovie">
             <button @click="searchMovies">Cerca</button>
           </div>
@@ -54,8 +57,6 @@
             </div>
 
             <div class="summary movie_title">Summary: {{ movie.overview }}</div>
-
-            
 
             <div class="movie_title">
               Vote:
