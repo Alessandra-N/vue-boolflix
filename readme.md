@@ -51,9 +51,9 @@ Arrotondiamo sempre per eccesso all’unità successiva, non gestiamo icone mezz
 
 Trasformiamo quello che abbiamo fatto fino ad ora in una vera e propria webapp,
 creando un layout completo simil-Netflix:
-● Un header che contiene logo e search bar
+● Un header che contiene logo e search bar ✔
 ● Dopo aver ricercato qualcosa nella searchbar, i risultati appaiono sotto forma
 di “card” in cui lo sfondo è rappresentato dall’immagine di copertina (consiglio
-la poster_path con w342)
+la poster_path con w342) ✔
 ● Andando con il mouse sopra una card (on hover), appaiono le informazioni
-aggiuntive già prese nei punti precedenti più la overview
+aggiuntive già prese nei punti precedenti più la overview ✔

@@ -40,17 +40,20 @@
 
         <div class="movies d-flex flex-wrap justify-content-between">
           
-          <div class="movie_card d-flex flex-column align-items-center justify-content-between" v-for="movie in movies">
+          <div class="movie_card d-flex flex-column align-items-center justify-content-around" v-for="movie in movies">
             
-            <img class="locandina justify-self-center" :src="'https://image.tmdb.org/t/p/w300/' + movie.poster_path" alt=""
+            <img class="position-absolute locandina justify-self-center" :src="'https://image.tmdb.org/t/p/w300/' + movie.poster_path" alt=""
             onerror="this.onerror=null;this.src='https://www.drhelpdesk.in/upload/product/product_one16184778601.jpg';">
+            
             <div class="movie_title">Movie title: {{ movie.title }} </div>
             <div class="movie_title">Original title: {{ movie.original_title }} </div>
-            <div class="movie_title d-flex jsutify-content-center">
+            <div class="movie_title d-flex jsutify-content-center align-items-center">
               Language:
               <img class="flag" :src="'https://flagcdn.com/40x30/' + movie.original_language + '.png'"
               onerror="this.onerror=null;this.src='http://www.silverskytravel.com/img/image-not-available.jpg';">
             </div>
+
+            <div class="movie_title">Summary: {{ movie.overview }}</div>
 
             <div class="movie_title">
               Vote:
@@ -80,6 +83,8 @@
               <img class="flag" :src="'https://flagcdn.com/40x30/' + tvSerie.original_language + '.png'"
               onerror="this.onerror=null;this.src='http://www.silverskytravel.com/img/image-not-available.jpg';">
             </div>
+
+            <div class="movie_title">Summary: {{ tvSerie.overview }}</div>
 
             <div class="movie_title">
               Vote:

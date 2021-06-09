@@ -36,23 +36,23 @@ header > nav > h1 {
 .movies, .tv_series {
     padding: 3rem;
 }
-.movie_card {
+.movie_card, .movie_card > .locandina {
     height: 400px;
     width: 300px;
-    padding: 1rem;
-    background: rgb(113,128,174);
-    background: linear-gradient(0deg, rgba(113,128,174,1) 10%, rgb(77, 75, 190) 90%);
-    border: 2px solid white;
     border-radius: 10px;
+    border: 1px solid lightgray
+}
+.movie_card {
+    background: rgb(113,128,174);
+    background: linear-gradient(0deg, rgba(113,128,174,1) 10%, rgb(75, 177, 190) 90%);
     margin-bottom: 2rem;
 }
-.movie_card > .locandina {
-    height: 200px;
-    width: 150px;
+.movie_card > .locandina:hover {
+    display: none;
 }
 .movie_card > .movie_title {
     font-family: 'Acme', sans-serif;
-    font-size: 20px;
+    font-size: 18px;
     text-align: center;
     color: white;
 }
@@ -61,6 +61,6 @@ header > nav > h1 {
 }
 
 .flag {
-    max-width: 30px;
+    max-height: 20px;
     margin-left: 1rem;
 }
