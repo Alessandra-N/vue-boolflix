@@ -7,9 +7,12 @@ const app = new Vue  ({
         seriesUrl: "https://api.themoviedb.org/3/search/tv?api_key=721dbf1e3d02ede41edd01ebb9dda0b6",
         genresUrl: "https://api.themoviedb.org/3/genre/movie/list?api_key=721dbf1e3d02ede41edd01ebb9dda0b6",
         searchedMovie: "",
+        selected: "",
+        
         movies: [],
         tvSeries: [],
         genres: [],
+        genreIds: [],
     },
 
     methods: {
@@ -19,7 +22,11 @@ const app = new Vue  ({
             .get(this.movieUrl + "&query=" + this.searchedMovie.replace(/ /g, '+'))
             .then(response => {
                 this.movies = response.data.results;
-                console.log(response.data);
+
+                for (i = 0; i < this.movies.length; i++){
+                    this.genreIds = this.movies[i].genre_ids
+                    console.log(this.movies[i].genre_ids);
+                }
                
             })
             .catch(e => {
@@ -40,6 +47,7 @@ const app = new Vue  ({
         
     },
 
+    /* Chiamata axios per ottenere la lista dei generi */
     mounted () {
         axios
         .get(this.genresUrl)
