@@ -13,18 +13,22 @@ header {
 header > nav > h1 {
     font-family: 'Lobster', cursive;
 }
+.form_box > .input > *,
 .form_box > * {
     font-size: 20px;
     padding: 0.5rem;
     border: 0;
     border-radius: 10px;
 }
-.form_box > input {
+.form_box > select {
+    width: 325px;
+}
+.form_box > .input > input {
     margin-right: 1rem;
     padding-left: 2rem;
     width: 190px;
 }
-.form_box > button {
+.form_box > .input > button {
     background: white;
     background: linear-gradient(180deg, white 5%, rgba(23,170,156,1) 95%);
     padding: 0.5rem 2rem;
@@ -59,7 +63,7 @@ header > nav > h1 {
     color: rgb(238, 238, 170);
 }
 .movie_card > .card_texts > .summary {
-    height: 100px;
+    height: 150px;
     overflow-y: scroll;
     padding: 0.5rem;
     margin: 1rem;

@@ -70,4 +70,4 @@ dall’API con Nome e Cognome, e i generi associati al film con questo schema:
 
 Milestone 6 (Opzionale):
 Creare una lista di generi richiedendo quelli disponibili all'API e creare dei filtri con i
-generi tv e movie per mostrare/nascondere le schede ottenute con la ricerca
+generi tv e movie per mostrare/nascondere le schede ottenute con la ricerca ✔
