@@ -1,6 +1,5 @@
 /* COMMON */
 body {
-    height: 100vh;
     background-image: url(https://static.vecteezy.com/system/resources/previews/000/374/866/non_2x/seamless-abstract-background-horizontally-and-vertically-repeatable-vector.jpg);
 }
 
@@ -87,3 +86,5 @@ header > nav > h1 {
     background: rgb(238, 238, 170); 
     border-radius: 10px;
 }
+
+/* UTILITIES */

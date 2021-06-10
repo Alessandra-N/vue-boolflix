@@ -7,7 +7,7 @@ const app = new Vue  ({
         seriesUrl: "https://api.themoviedb.org/3/search/tv?api_key=721dbf1e3d02ede41edd01ebb9dda0b6",
         genresUrl: "https://api.themoviedb.org/3/genre/movie/list?api_key=721dbf1e3d02ede41edd01ebb9dda0b6",
         searchedMovie: "",
-        selected: "",
+        selected: "Select by genre...",
         
         movies: [],
         tvSeries: [],
@@ -23,10 +23,19 @@ const app = new Vue  ({
             .then(response => {
                 this.movies = response.data.results;
 
-                for (i = 0; i < this.movies.length; i++){
-                    this.genreIds = this.movies[i].genre_ids
-                    console.log(this.movies[i].genre_ids);
+                /*for (i = 0; i < this.movies.length; i++){
+                    this.genreIds.push(this.movies[i].genre_ids)
                 }
+                for (i = 0; i < this.genres.length; i++) {
+                    console.log(this.genres[i].id);
+
+                }
+
+                console.log(this.genreIds);
+                //console.log(this.genres);
+                 if (this.genre.includes(this.genreIds)){
+
+                } */
                
             })
             .catch(e => {
@@ -57,6 +66,7 @@ const app = new Vue  ({
         .catch(e => {
             console.error(e);
         })
+
     }
 
 })

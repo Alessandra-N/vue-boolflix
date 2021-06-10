@@ -29,8 +29,9 @@
           <h1>Welcome to BoolFlix</h1>
           <div class="form_box d-flex align-items-center">
 
-            <select v-model="selected">
-              <option v-for="genre in genres" value="">{{genre.name}}</option>
+            <select id="option" v-model="selected">
+              <option>Select by genre...</option>
+              <option v-for="genre in genres">{{genre.id}}</option>
             </select>
 
             <input type="text" placeholder="Search by title" v-model="searchedMovie">
@@ -46,13 +47,13 @@
 
         <div class="movies d-flex flex-wrap justify-content-between">
           
-          <div class="movie_card d-flex flex-column align-items-center justify-content-around" v-for="movie in movies">
-            
+          <div class="movie_card d-flex flex-column align-items-center justify-content-around" v-for="movie in movies" v-if="selected === 'Select by genre...' || movie.genre_ids.includes(parseInt(selected))">
+
             <img class="position-absolute locandina justify-self-center" :src="'https://image.tmdb.org/t/p/w300/' + movie.poster_path" alt=""
             onerror="this.onerror=null;this.src='https://www.drhelpdesk.in/upload/product/product_one16184778601.jpg';">
             
             <div class="card_texts">
-
+              {{movie.genre_ids}}
               <div class="movie_title">Movie title: {{ movie.title }} </div>
               <div class="movie_title">Original title: {{ movie.original_title }} </div>
               <div class="movie_title d-flex jsutify-content-center align-items-center">
@@ -63,7 +64,7 @@
 
               <div class="summary movie_title">Summary: {{ movie.overview }}</div>
             </div>
-
+            
             <div class="movie_title">
               Vote:
               <span v-for="n in Math.ceil(movie.vote_average % 2)">
@@ -83,11 +84,10 @@
           
           <div class="movie_card d-flex flex-column align-items-center justify-content-between" v-for="tvSerie in tvSeries">
             
-            <img class="locandina justify-self-center" :src="'https://image.tmdb.org/t/p/w300/' + tvSerie.poster_path" alt=""
+            <img class="position-absolute locandina justify-self-center" :src="'https://image.tmdb.org/t/p/w300/' + tvSerie.poster_path" alt=""
             onerror="this.onerror=null;this.src='https://www.drhelpdesk.in/upload/product/product_one16184778601.jpg';">
             
             <div class="card_texts">
-
               <div class="movie_title">TV serie title: {{ tvSerie.title }} </div>
               <div class="movie_title">Original title: {{ tvSerie.original_title }} </div>
               <div class="movie_title d-flex jsutify-content-center">
