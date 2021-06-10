@@ -37,7 +37,7 @@
       </header>
 
       <main>
-
+        
         <div class="movies d-flex flex-wrap justify-content-between">
           
           <div class="movie_card d-flex flex-column align-items-center justify-content-around" v-for="movie in movies">
@@ -45,28 +45,32 @@
             <img class="position-absolute locandina justify-self-center" :src="'https://image.tmdb.org/t/p/w300/' + movie.poster_path" alt=""
             onerror="this.onerror=null;this.src='https://www.drhelpdesk.in/upload/product/product_one16184778601.jpg';">
             
-            <div class="movie_title">Movie title: {{ movie.title }} </div>
-            <div class="movie_title">Original title: {{ movie.original_title }} </div>
-            <div class="movie_title d-flex jsutify-content-center align-items-center">
-              Language:
-              <img class="flag" :src="'https://flagcdn.com/40x30/' + movie.original_language + '.png'"
-              onerror="this.onerror=null;this.src='http://www.silverskytravel.com/img/image-not-available.jpg';">
-            </div>
+            <div class="card_texts">
 
-            <div class="summary movie_title">Summary: {{ movie.overview }}</div>
+              <div class="movie_title">Movie title: {{ movie.title }} </div>
+              <div class="movie_title">Original title: {{ movie.original_title }} </div>
+              <div class="movie_title d-flex jsutify-content-center align-items-center">
+                Language:
+                <img class="flag" :src="'https://flagcdn.com/40x30/' + movie.original_language + '.png'"
+                onerror="this.onerror=null;this.src='http://www.silverskytravel.com/img/image-not-available.jpg';">
+              </div>
+
+              <div class="summary movie_title">Summary: {{ movie.overview }}</div>
+
+              <div class="movie_title">
+                Vote:
+                <span v-for="n in Math.ceil(movie.vote_average % 2)">
+                  <i class="fas fa-star"></i>
+                </span>
+
+                <span v-for="n in (5 - Math.ceil(movie.vote_average % 2))">
+                  <i class="far fa-star"></i>
+                </span>
+              </div>
+
+            </div>
 
             
-
-            <div class="movie_title">
-              Vote:
-              <span v-for="n in Math.ceil(movie.vote_average % 2)">
-                <i class="fas fa-star"></i>
-              </span>
-
-              <span v-for="n in (5 - Math.ceil(movie.vote_average % 2))">
-                <i class="far fa-star"></i>
-              </span>
-            </div>
         
           </div>
 
@@ -79,25 +83,29 @@
             <img class="locandina justify-self-center" :src="'https://image.tmdb.org/t/p/w300/' + tvSerie.poster_path" alt=""
             onerror="this.onerror=null;this.src='https://www.drhelpdesk.in/upload/product/product_one16184778601.jpg';">
             
-            <div class="movie_title">TV serie title: {{ tvSerie.title }} </div>
-            <div class="movie_title">Original title: {{ tvSerie.original_title }} </div>
-            <div class="movie_title d-flex jsutify-content-center">
-              Language:
-              <img class="flag" :src="'https://flagcdn.com/40x30/' + tvSerie.original_language + '.png'"
-              onerror="this.onerror=null;this.src='http://www.silverskytravel.com/img/image-not-available.jpg';">
-            </div>
+            <div class="card_texts">
 
-            <div class="summary movie_title">Summary: {{ tvSerie.overview }}</div>
+              <div class="movie_title">TV serie title: {{ tvSerie.title }} </div>
+              <div class="movie_title">Original title: {{ tvSerie.original_title }} </div>
+              <div class="movie_title d-flex jsutify-content-center">
+                Language:
+                <img class="flag" :src="'https://flagcdn.com/40x30/' + tvSerie.original_language + '.png'"
+                onerror="this.onerror=null;this.src='http://www.silverskytravel.com/img/image-not-available.jpg';">
+              </div>
 
-            <div class="movie_title">
-              Vote:
-              <span v-for="n in Math.ceil(tvSerie.vote_average % 2)">
-                <i class="fas fa-star"></i>
-              </span>
+              <div class="summary movie_title">Summary: {{ tvSerie.overview }}</div>
 
-              <span v-for="n in (5 - Math.ceil(tvSerie.vote_average % 2))">
-                <i class="far fa-star"></i>
-              </span>
+              <div class="movie_title">
+                Vote:
+                <span v-for="n in Math.ceil(tvSerie.vote_average % 2)">
+                  <i class="fas fa-star"></i>
+                </span>
+
+                <span v-for="n in (5 - Math.ceil(tvSerie.vote_average % 2))">
+                  <i class="far fa-star"></i>
+                </span>
+              </div>
+
             </div>
         
           </div>

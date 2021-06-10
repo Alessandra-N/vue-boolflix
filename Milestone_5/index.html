@@ -74,9 +74,6 @@
                 <i class="far fa-star"></i>
               </span>
             </div>
-
-            
-            
         
           </div>
 
@@ -89,15 +86,18 @@
             <img class="locandina justify-self-center" :src="'https://image.tmdb.org/t/p/w300/' + tvSerie.poster_path" alt=""
             onerror="this.onerror=null;this.src='https://www.drhelpdesk.in/upload/product/product_one16184778601.jpg';">
             
-            <div class="movie_title">TV serie title: {{ tvSerie.title }} </div>
-            <div class="movie_title">Original title: {{ tvSerie.original_title }} </div>
-            <div class="movie_title d-flex jsutify-content-center">
-              Language:
-              <img class="flag" :src="'https://flagcdn.com/40x30/' + tvSerie.original_language + '.png'"
-              onerror="this.onerror=null;this.src='http://www.silverskytravel.com/img/image-not-available.jpg';">
-            </div>
+            <div class="card_texts">
 
-            <div class="summary movie_title">Summary: {{ tvSerie.overview }}</div>
+              <div class="movie_title">TV serie title: {{ tvSerie.title }} </div>
+              <div class="movie_title">Original title: {{ tvSerie.original_title }} </div>
+              <div class="movie_title d-flex jsutify-content-center">
+                Language:
+                <img class="flag" :src="'https://flagcdn.com/40x30/' + tvSerie.original_language + '.png'"
+                onerror="this.onerror=null;this.src='http://www.silverskytravel.com/img/image-not-available.jpg';">
+              </div>
+
+              <div class="summary movie_title">Summary: {{ tvSerie.overview }}</div>
+            </div>
 
             <div class="movie_title">
               Vote:

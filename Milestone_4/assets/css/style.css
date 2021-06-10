@@ -47,7 +47,7 @@ header > nav > h1 {
     background: linear-gradient(0deg, rgba(113,128,174,1) 10%, rgb(75, 177, 190) 90%);
     margin-bottom: 2rem;
 }
-.movie_card > .locandina:hover {
+.movie_card:hover .locandina {
     display: none;
 }
 .movie_card .movie_title {
@@ -59,7 +59,7 @@ header > nav > h1 {
 .movie_title i {
     color: rgb(238, 238, 170);
 }
-.movie_card > .summary {
+.movie_card > .card_texts > .summary {
     height: 100px;
     overflow-y: scroll;
     padding: 0.5rem;
