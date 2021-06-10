@@ -15,7 +15,7 @@ const app = new Vue  ({
         genres: [],
         genreIds: [],
         movieIds: [],
-        cast: [],
+        //cast: [],
     },
 
     methods: {
@@ -26,7 +26,7 @@ const app = new Vue  ({
             .then(response => {
                 this.movies = response.data.results;
 
-                for (i = 0; i < this.movies.length; i++) {
+                /* for (i = 0; i < this.movies.length; i++) {
                     this.movieIds.push(this.movies[i].id)
                     axios
                     .get(this.crewUrl + this.movies[i].id + "/credits?api_key=721dbf1e3d02ede41edd01ebb9dda0b6")
@@ -34,7 +34,10 @@ const app = new Vue  ({
                         this.cast = response.data.cast
                         console.log(this.cast);
                     })
-                }
+                    .catch(e => {
+                        console.error(e);
+                        })
+                } */
                 
             })
             .catch(e => {

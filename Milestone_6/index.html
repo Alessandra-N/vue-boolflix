@@ -48,13 +48,17 @@
       <main>
 
         <div class="movies d-flex flex-wrap justify-content-around">
-          
+          <!-- <div v-for="actor in cast">
+            <div>
+              {{actor.name}}
+            </div>
+          </div> -->
           <div class="movie_card d-flex flex-column justify-content-center" v-for="movie in movies" v-if="selected === 'Select by genre...' || movie.genre_ids.includes(selected)">
 
             <img class="position-absolute locandina justify-self-center" :src="'https://image.tmdb.org/t/p/w300/' + movie.poster_path" alt=""
             onerror="this.onerror=null;this.src='https://www.drhelpdesk.in/upload/product/product_one16184778601.jpg';">
             
-            <!-- <span v-for="actor in cast">{{cast.name}}</span> -->
+            
             
             <div class="card_texts d-flex flex-column justify-content-between">
               <div class="movie_title">Movie title: {{ movie.title }} </div>
